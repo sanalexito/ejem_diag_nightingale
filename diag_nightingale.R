@@ -7,9 +7,8 @@ library(circlize)
 
 #Partimos de un conjunto de datos grande... muy grande!!!
 
-directorio <- "C:/Users/52552/OneDrive - INEGI/Respaldo/ENVE/ENVE 2024/base/vistas/"
-arch <- "01_VISTA_ENVE_2024_FECHA_2024-08-09_14-06-44.Rdata"
-write.csv(arch, "C:/Users/52552/Documents/Alexito/presentaciones/charla_dataviz_uam/delitos.xlsx")
+directorio <- "Tu/ruta/donde_esta_el_dataset/"
+arch <- "delitos.xlsx"
 
 load(paste0(directorio, arch))
 bd_a <- TAB[[2]]
