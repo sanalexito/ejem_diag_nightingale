@@ -1,15 +1,8 @@
 library(dplyr)
 library(ggplot2)
 library(stringr)
-#Si jalan los que estan comentados
 
-# hike_data <- readr::read_rds('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-11-24/hike_data.rds')
-# hike_data$region <- as.factor(word(hike_data$location, 1, sep = " -- "))
-# hike_data$length_num <- as.numeric(sapply(strsplit(hike_data$length, " "), "[[", 1))
-# cc <- hike_data %>% as.data.frame()
-# openxlsx::write.xlsx(cc, "C:/Users/52552/Documents/Alexito/presentaciones/charla_dataviz_uam/datos.xlsx")
-
-hike_data <- openxlsx::read.xlsx("C:/Users/52552/Documents/Alexito/presentaciones/charla_dataviz_uam/datos.xlsx")
+hike_data <- openxlsx::read.xlsx("~/datos.xlsx")
 
 plot_df <- hike_data %>%
   group_by(region) %>%
@@ -62,7 +55,6 @@ plt <- ggplot(plot_df) +
     linetype = "dashed",
     color = "gray12"
   ) + 
-  
   # Make it circular!
   coord_polar()
 
